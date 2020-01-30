@@ -2,7 +2,7 @@ class SlotMachine extends React.Component {
   render() {
     const {s1, s2, s3} = this.props;
     const winner = s1 === s2 && s1 === s3;
-    const styles = {fontSize: '50px', backgroundColor: 'purple'};
+    const styles = {fontSize: '50px', textShadow: '2px 2px 4px white'};
 
     return (
         <div className="SlotMachine">
