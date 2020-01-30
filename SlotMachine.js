@@ -11,9 +11,7 @@ class SlotMachine extends React.Component {
     }
     return (
         <div>
-          <img src={s1}/>
-          <img src={s2}/>
-          <img src={s3}/>
+          <p>{s1} {s2} {s3}</p>
           <p>{msg}</p>
         </div>
     );
