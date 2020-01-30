@@ -1,16 +1,17 @@
 class SlotMachine extends React.Component {
   render() {
-    let msg;
     const {s1, s2, s3} = this.props;
-    if (s1 === s2 && s1 === s3) {
-      msg = 'You win!';
-    } else {
-      msg = 'You lose!';
-    }
+    const winner = s1 === s2 && s1 === s3;
+    const styles = {fontSize: '50px', backgroundColor: 'purple'};
+
     return (
-        <div>
-          <p>{s1} {s2} {s3}</p>
-          <p>{msg}</p>
+        <div className="SlotMachine">
+          <p style={styles}>
+            {s1} {s2} {s3}
+          </p>
+          <p className={winner ? 'SlotMachine-winner' : 'SlotMachine-loser'}>
+            {winner ? 'You win!' : 'You lose!'}
+          </p>
         </div>
     );
   }
